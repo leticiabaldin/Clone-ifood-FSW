@@ -5,6 +5,7 @@ import Image from "next/image";
 import ProductsList from "./_components/products-list";
 import { Button } from "./_components/ui/button";
 import { ChevronRightIcon } from "lucide-react";
+import RestaurantsList from "./_components/restaurants-list";
 
 const Home = () => {
   return (
@@ -51,6 +52,19 @@ const Home = () => {
           quality={100}
         />
       </div>
+    
+
+      <div className="pt-6 ">
+        <div className="px-5 flex justify-between items-center">
+          <h2 className="font-semibold">Restaurantes Recomendados</h2>
+          <Button variant="ghost" className="text-primary p-0 hover:bg-transparent">
+            Ver todos
+            <ChevronRightIcon size={16}/>
+           </Button>
+        </div>
+        <RestaurantsList />
+      </div>
+
     </>
   );
 };
