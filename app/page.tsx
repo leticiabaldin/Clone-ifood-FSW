@@ -16,11 +16,11 @@ const Home = () => {
       <div className="px-5 pt-6">
         <CategoryList />
       </div>
-
+{/** banner 1 */}
       <div className="px-5 pt-6">
         <Image
           src="/images/banner-pizza.png"
-          alt="banner"
+          alt="banner-pizza"
           width={0}
           height={0}
           className="h-auto w-full object-contain"
@@ -38,6 +38,18 @@ const Home = () => {
            </Button>
         </div>
         <ProductsList />
+      </div>
+  {/** banner 2 */}
+      <div className="px-5 pt-6">
+        <Image
+          src="/images/banner-burguer.png"
+          alt="banner-burguer"
+          width={0}
+          height={0}
+          className="h-auto w-full object-contain"
+          sizes="100vw"
+          quality={100}
+        />
       </div>
     </>
   );
