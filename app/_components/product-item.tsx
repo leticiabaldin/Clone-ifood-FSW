@@ -1,5 +1,11 @@
+"use client" 
+//sempre que tiver qualquer interação, ex: onClick
+
 import { Prisma, Product } from "@prisma/client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { calculateProductTotalPrice } from "../_helpers/price";
 
 interface ProductItemProps {
@@ -15,8 +21,10 @@ interface ProductItemProps {
 }
 
 const ProductItem = ({ product }: ProductItemProps) => {
+
   return (
-    <div className="space-y-2 w-[150px] min-w-[150px]">
+   <Link className="w-[150px] min-w-[150px]" href={`/products/${product.id}`}>
+    <div className="space-y-2 w-full">
       {/**imagem */}
       <div className="h-[150px] w-full relative">
         <Image
@@ -55,6 +63,7 @@ const ProductItem = ({ product }: ProductItemProps) => {
         {product.restaurant.name}
       </span>
     </div>
+   </Link>
   );
 };
 
